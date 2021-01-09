@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+{% block title %}Share a post{% endblock %}
+{% block content %}
+<div class = 'container'>
+        {% if sent %}
+        <h1>E-mail successfully sent</h1>
+        <p>
+        "{{ post.title }}" was successfully sent to {{ form.cleaned_data.to }}.
+        </p>
+        {% else %}
+        <h1 class = 'ByMail center-align'>Share "{{ post.title }}" By E-mail</h1>
+        <div class = 'container'>
+            <form action="." method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            {% comment %} <input type="submit" value="Send e-mail"> {% endcomment %}
+            <div class = 'center-align'>
+            <button class="btn waves-effect waves-light" type="submit" value = 'Send e-mail' name="action">Submit
+                {% comment %} <i class="material-icons right">send</i> {% endcomment %}
+            </button>
+            </div>
+        
+            </form>
+        </div>
+        {% endif %}
+
+</div>
+{% endblock %}

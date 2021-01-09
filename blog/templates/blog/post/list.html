@@ -1,0 +1,131 @@
+{% extends "blog/base.html" %}
+{% load static%}
+
+
+{% block title %}My Blog{% endblock %}
+
+{% block content %}
+
+<section class="fslider">
+        <div class="slider">
+            <ul class="slides">
+                
+                <li>
+                    <img src="{% static 'images/idea3.jpg' %}" alt="image1">
+                    <div class="caption center-align white-text">
+                        <h3>Real Simple</h3>
+                        <h5 class="light text-lighten-3"> Ideas, Tips, and Simple Ways to Make Life Even Easie</h5>
+
+                    </div>
+                </li>
+                <li>
+                    <img src="{% static 'images/life2.jpg' %}" alt="image1">
+                    <div class="caption center-align white-text">
+                        <h3>Lifehacker:</h3>
+                        <h5 class="light text-lighten-3"> Tips and downloads for getting things done</h5>
+
+                    </div>
+                </li>
+                <li>
+                    {% comment %} <img src='/static/images/samsung-memory-ngWKDQhM88Q-unsplash.jpg' alt="logo"  /> {% endcomment %}
+                    <img src  = "{% static 'images/computer2.jpg' %}" />
+                    
+                    <div class="caption center-align white-text">
+                        <h3>Computer</h3>
+                        <h5 class="light text-lighten-3">Learn new Techonologies </h5>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+</section>
+
+
+
+
+
+
+  </div><div class="container-fluid">
+        {% comment %} <h1 id="myblog" class="center-align">These are my blogs</h1> {% endcomment %}
+        {% for post in posts %}
+        
+                    <div class="row">
+                        <div class="col s12 m12 l4">
+                        <div class="card hoverable deep-purple accent-3 z-depth-2">
+                            <div class="card-content white-text">
+                            <span class="card-title white-text ">{{ post.title }}</span>
+                            <p>{{ post.body|truncatewords:30|linebreaks }}</p>
+                            </div>
+                            {% comment %} <br>
+                            <br> {% endcomment %}
+                            <hr class ="cardhr" > 
+                            <div class="card-action">
+                            <p class="carddate">
+                            Published {{ post.publish }} by {{ post.author }}
+                            </p>
+                            <a class="btn tooltipped" data-position="bottom" data-tooltip="view full blog" id = 'carda'  class= 'center-align'  href="{{ post.get_absolute_url }}">Click ME</a>
+                            
+                            </div>
+                        </div>
+                        </div>
+        {% comment %} <h2 id = absurl>
+        <a href="{{ post.get_absolute_url }}">
+        {{ post.title }}
+        </a>
+        </h2>
+        <p class="date">
+        Published {{ post.publish }} by {{ post.author }}
+        </p>
+        {{ post.body|truncatewords:30|linebreaks }} {% endcomment %}
+        {% endfor %}
+
+        <!-- This is for class based -->
+
+            
+
+        {% comment %} <section>
+        <div class = 'fpagination center-align '>
+
+            {% include "blog/pagination.html" with page=page_obj %} 
+        </div>
+        </section> {% endcomment %}
+                    
+        <!-- {% include "blog/pagination.html" with page=posts %}       This for function based -->
+</div>
+
+<section class = 'pagination'>
+    <div class ='container fpagination center-align'>
+        {% include "blog/pagination.html" with page=page_obj %} 
+    </div>
+</section>
+
+<hr>
+
+<section >
+    <div class =' blogPicInfo container'> 
+        <div class ='row'>
+            <div class = 'col l6 sm12  left-align '>
+                <img   src="{% static 'images/undraw_blogging_vpvv.svg' %}" height = '300' width = '500' alt="image1">           
+
+            </div>
+            <div class = 'col l6 sm12   '>
+                <p class = 'blogInfo' >
+                A blog (a truncation of "weblog")[1] is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. Until 2009, blogs were usually the work of a single individual,[citation needed] occasionally of a small group, and often covered a single subject or topic. In the 2010s, "multi-author blogs" (MABs) emerged, featuring the writing of multiple authors and sometimes professionally edited. MABs from newspapers, other media outlets, universities, think tanks, advocacy groups, and similar institutions account for an increasing quantity of blog traffic. The rise of Twitter and other "microblogging" systems helps integrate MABs and single-author blogs into the news media. Blog can also be used as a verb, meaning to maintain or add content to a blog
+                </p>          
+
+            </div>
+        </div>
+
+    </div>
+    
+</section>
+
+
+
+
+
+
+
+
+
+{% endblock %}

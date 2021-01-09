@@ -1,0 +1,166 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% block title %}{% endblock %}</title>
+
+<link href="{% static "css/style.css" %}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Pacifico&display=swap" rel="stylesheet">
+    <!--  M icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--  M Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+
+<section>
+<div  class = "fnavbar">
+        
+  <nav class="nav-fixed">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">MyBlog</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="side material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li> 
+      </ul>
+    </div>
+    
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+  </ul>
+
+
+</div>
+</section>
+
+<div id="content">
+{% block content %}
+{% endblock %}
+</div>
+{% comment %} <div id="sidebar">
+<h2>My blog</h2>
+<p>This is my blog.</p>
+</div> {% endcomment %}
+</body>
+{% block body%}
+
+{% endblock%}
+
+{% comment %} <section class  = 'fparallax'>
+    <div class="parallax-container">
+      <div class="parallax"><img src="{% static 'images/blog-slogan.jpg' %}" alt="image1">
+    </div>
+</section> {% endcomment %}
+
+
+<section class = 'features'>
+  <div class = 'container'>
+      <div class = 'row'>
+            <div class = 'col l3 s6 m6'>
+                <div >
+                  <i class="large material-icons">share</i>
+                  <p class='share'>You can share it</p>
+                </div>
+            </div>
+            <div class = 'col l3 s6 m6'>
+                <div >
+                  <i class="large material-icons">local_library</i>
+                  <p class='share'>you can read it</p>
+                </div>
+            </div>
+            <div class = 'col l3 s6 m6'>
+                <div >
+                  <i class="large material-icons">local_library</i>
+                  <p class='share'>you can read it</p>
+                </div>
+            </div>
+
+            <div class = 'col l3 s6 m6'>
+                <div >
+                  <i class="large material-icons">insert_comment</i>
+                  <p class='share'>You can comment out</p>
+                </div>
+            </div>
+    </div>
+  </div>
+</section>
+        
+<section class = 'ffooter'>
+    <footer class = 'footer-one'>
+        <div class='container'>
+            <div class = 'row'>
+                <div class = 'col l4 s12 '>
+                    <h4 class ='white-text '>Contact Us</h4>
+                    <p class  = 'white-text'>
+                        ABC 507 , Mumbai , India
+                    </p>
+                    <p class   ='white-text '>
+                       +919787969513
+                    </p>
+
+                </div>
+                <div class = 'col l4 s12 '>
+                    <h4 class ='white-text '>About Us</h4>
+                    <ul>
+                            <li><a href = '#' class = 'white-text'>Mylog</a></li>
+                            <li><a href = '#' class = 'white-text'>Django</a></li>
+                            <li><a href = '#' class = 'white-text'>Sqlite3</a></li>
+                    </ul>
+
+                </div>
+                <div class ='col l4 sm12  '>
+                    <h4 class ='white-text '>Social Media</h4>
+                        <ul>
+                            <li><a href = '#' class = 'white-text'>Facebool</a></li>
+                            <li><a href = '#' class = 'white-text'>Instagram</a></li>
+                            <li><a href = '#' class = 'white-text'>Twitter</a></li>
+                        </ul>
+
+                </div>
+
+            </div>
+            
+        </div>
+        <div class = 'row footer-two' >
+                <div  class = 'col l4 sm12 left-align '>
+                    <p class = 'white-text'>&copy;Myblog
+                    </p>
+
+                </div>
+                <div  class = 'col l4 sm12 center-align '>
+                    <p class = 'white-text'>Django❤
+                    </p>
+
+                </div>
+                <div class  = 'col l4 sm12 right-align '>
+                    <p class = 'white-text'>Desighed by Girish
+                    </p>
+                </div>
+            </div>
+
+    </footer>
+
+</section>
+
+
+{% block script %}
+<script>
+</script
+
+{% endblock %}
+
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<!-- M Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- custom js -->
+<script src="{% static "script/loader.js" %}"></script>
+
+</html>

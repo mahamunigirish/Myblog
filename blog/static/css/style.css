@@ -1,0 +1,113 @@
+.nav-wrapper{
+    /* background-color: #35BDD0; */
+    /* background-color: #1e88e5; */
+    background-color: #651fff;
+}
+
+.slider .indicators .indicator-item.active {
+    /* background-color: #35BDD0 !important; */
+    /* background-color: #1e88e5 !important; */
+    background-color: #651fff !important;
+    
+}
+    
+/* .card {
+    background-color: #35BDD0 !important;
+} */
+
+.card{
+    background-color: #383CC1;
+}
+.carddate{
+    color:white;
+    font-size: larger;
+}
+
+.card-title{
+    color: #c9d1d8 !important;
+}
+
+#myblog{
+    color:#4c18bd ;
+
+}
+
+.footer-one{
+    background-color: #651fff;
+}
+.footer-two{
+    background-color: #4c18bd ;
+
+ }
+
+.ffooter{
+     margin-top: 5%;
+ }
+
+.features{
+     margin-top: 5%;
+ }
+i{
+    /* color: #1768af; */
+    color: #651fff;
+}
+.share{
+    /* color: #1768af; */
+    color: #383CC1;
+}
+
+
+.blogInfo{
+    /* margin-top: 50% !important; */
+    color: #651fff ;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 100%;
+    margin-top: 5%;
+    
+}
+
+.addComment{
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.blogTitle{
+    color: #651fff;
+    font-weight: bold;
+    font-variant: small-caps;
+    
+}
+.countComment{
+    font-weight: normal;
+    font-size: small;
+
+}
+.material-icons right{
+    color: white !important;
+}
+.ByMail{
+    font-size: large;
+}
+
+/* .slider{
+    background-color: black;
+}
+.features{
+    background-color: black;
+}
+element{
+    background-color: black;
+} */
+/* body{
+    background-color: grey;
+} */
+
+.side.material-icons{
+    color: white !important;
+}
+.brand-logo{
+    font-weight: bold;
+    font-variant: small-caps;
+
+}
